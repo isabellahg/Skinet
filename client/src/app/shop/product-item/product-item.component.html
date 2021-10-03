@@ -1,0 +1,31 @@
+<p-card
+  class="mr-2 mb-2"
+  header="{{ product.name }}"
+  subheader="{{ product.price | currency }}"
+  [style]="{ width: '300px', height: '500px', position: 'relative' }"
+  styleClass="p-card-shadow"
+>
+  <ng-template pTemplate="header">
+    <img alt="Card" src="{{ product.pictureUrl }}" alt="{{ product.name }}" />
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <div
+      class="flex flex-row justify-content-around"
+      [style]="{ position: 'absolute', bottom: '10px', width: '90%' }"
+    >
+      <p-button
+        class="flex-1"
+        label="View"
+        [style]="{ width: '100%'}"
+        styleClass="p-button-outlined p-button-secondary"
+      ></p-button>
+      <p-button
+        class="flex-1"
+        icon="pi pi-shopping-cart"
+        styleClass="p-button-outlined p-button-secondary"
+        [style]="{ width: '100%'}"
+
+      ></p-button>
+    </div>
+  </ng-template>
+</p-card>
