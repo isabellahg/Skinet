@@ -1,0 +1,29 @@
+<div class="grid">
+  <div class="col-3">Filters</div>
+  <div class="col-9">
+    <div class="flex flex-row flex-wrap">
+        <p-card
+          class="mr-2 mb-2"
+          *ngFor="let product of products"
+          header="{{ product.name }}"
+          subheader="Card Subheader"
+          [style]="{ width: '300px' }"
+          styleClass="p-card-shadow"
+        >
+          <ng-template pTemplate="header">
+            <img alt="Card" src="assets/showcase/images/usercard.png" />
+          </ng-template>
+          <p>Description</p>
+          <ng-template pTemplate="footer">
+            <p-button label="Save" icon="pi pi-check"></p-button>
+            <p-button
+              label="Cancel"
+              icon="pi pi-times"
+              styleClass="p-button-secondary"
+              [style]="{ 'margin-left': '.5em' }"
+            ></p-button>
+          </ng-template>
+        </p-card>
+    </div>
+  </div>
+</div>
